@@ -14,11 +14,31 @@
 
 function gatcha(button) {
   // TODO: answer here
+  var result = '';
+  switch (button) {
+    case 1:
+      result = 'coba lagi ya';
+      break;
+    case 2:
+      result = 'selamat kamu mendapatkan kupon sebanyak 5';
+      break;
+    case 3:
+      result = 'selamat kamu mendapatkan kupon sebanyak 15';
+      break;
+    case 4:
+      result = 'selamat kamu mendapatkan kupon sebanyak 50';
+      break;
+    case 5:
+      result = 'selamat kamu mendapatkan kupon sebanyak 100';
+      break;
+  }
+  return result;
 }
 
-// Create variable button here
+// Create variable button here 
 // TODO: answer here
-
+var button = Math.floor(Math.random() * 5) + 1;
+console.log(button);
 console.log(gatcha(button))
 
 module.exports = gatcha

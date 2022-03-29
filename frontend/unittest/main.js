@@ -1,9 +1,11 @@
 function sum(a, b) {
-    return 0; // TODO: replace this
+    var result = a+b
+    return result; // TODO: replace this
 }
 
 function multiply(a, b) {
-    return 0; // TODO: replace this
+    var result = a*b
+    return result; // TODO: replace this
 }
 
 module.exports = {

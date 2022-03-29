@@ -37,6 +37,46 @@
 
 function fixData(line) {
   // TODO: answer here
+   var countVowel = 0;
+   var countConsonant = 0;
+   var result = '';
+   var vowel = ['a','i','u','e','o'];
+   var virus = ['#'];
+   var consonant = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'];
+   for(var i = 0; i < line.length; i++){
+      if(vowel.includes(line[i])){
+         countVowel++;
+      }
+      if(consonant.includes(line[i])){
+         countConsonant++;
+      }
+   }
+   if(countConsonant > countVowel){
+      for(var j = 0; j < line.length; j++){
+         if(virus.includes(line[j])){
+            result += 'a';
+         }else{
+            result += line[j];
+         }
+      }
+   }else if(countVowel > countConsonant){
+      for(var k = 0; k < line.length; k++){
+         if(virus.includes(line[k])){
+            result += 'b';
+         }else{
+            result += line[k];
+         }
+      }
+   }else{
+      for(var l = 0; l < line.length; l++){
+         if(virus.includes(line[l])){
+            result += 'c';
+         }else{
+            result += line[l];
+         }
+      }
+   }
+   return result;
 }
 
 console.log(fixData('aoi#fdg#ue'))

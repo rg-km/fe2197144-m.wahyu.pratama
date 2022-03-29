@@ -22,6 +22,15 @@ function ruangCafe(name, age, money) {
   const juice = 50000;
   const latte = 300000;
 
+  if (name === '') {
+    return 'Anda tidak boleh masuk!';
+  } else if (age < 17 && money >= juice) {
+    return 'Anda bisa pesan juice. Sisa uang anda: ' + (money - juice);
+  } else if (age >= 17 && money >= latte) {
+    return 'Anda bisa pesan latte. Sisa uang anda: ' + (money - latte);
+  } else {
+    return 'Uang tidak cukup. Anda harus pulang.';
+  }
   // TODO: answer here
 }
 

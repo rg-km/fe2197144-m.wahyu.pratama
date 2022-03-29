@@ -28,7 +28,7 @@ Jika mahasiswa dinyatakan tidak lulus maka akan menampilkan "<nama> tidak lulus"
 // DISPLAY "nama" tidak lulus
 
 var nama = "dito";
-var nilai = 60;
+var nilai = 70;
 var absen = 4;
 
 if (nilai >= 70 && absen < 5) {
