@@ -24,6 +24,7 @@ var removeElement = function(nums, val) {
       nums[i] = '_';
     }
   }
+  
   return result +', nums = '+ nums;
 };
 
