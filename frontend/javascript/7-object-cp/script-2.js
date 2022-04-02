@@ -6,6 +6,24 @@
 // - division() membagi nilai yang disimpan.
 
 let calculator = {
+  read() {
+    this.a = prompt("Masukkan nilai a");
+    this.b = prompt("Masukkan nilai b");
+  },
+  sum() {
+    Number(this.a + this.b);
+    return this.a + this.b;
+
+  },
+  substract() {
+    return this.a - this.b;
+  },
+  multiply() {
+    return this.a * this.b;
+  },
+  division() { 
+    return this.a / this.b;
+  }
   // Tulis kode di sini
   // TODO: answer here
 };

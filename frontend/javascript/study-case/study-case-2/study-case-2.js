@@ -28,8 +28,25 @@
 
 function getMaximumGold(grid) {
     // TODO: answer here
+    var maxGold = 0;
+    // if (grid == undefined || grid.length == 0) {
+    //     return "invalid data";
+    // }
+    // else if (grid[0].length !== grid.length) {
+    //     return "input should be a 2d array";
+    // }
+    // else{
+        for (let i = 0; i < grid.length; i++) {
+            for (let j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] !== 0) {
+                    maxGold = Math.max(maxGold, getMaximumGoldRecursive(grid, i, j));
+                }
+            }
+        }
+        return maxGold;
+    // }
 }; 
 
 // TODO: answer here
-
+console.log(getMaximumGold([[1,0,7],[2,0,6],[3,4,5],[0,3,0],[9,0,20]]));
 module.exports = getMaximumGold
