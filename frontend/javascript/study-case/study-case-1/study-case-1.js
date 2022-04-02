@@ -24,8 +24,31 @@
 
 function rotation(matrix) {
     // TODO: answer here
+    var newMatrix = [];
+    if (matrix == undefined || matrix.length == 0) {
+        return "invalid data";
+    }
+    else if (matrix[0].length !== matrix.length) {
+        return "input should be a 2d array";
+    }
+    else{
+        for (let index = 0; index < matrix.length; index++) {
+            newMatrix.push([]);
+        }
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = matrix.length-1; j >= 0; j--) {
+                newMatrix[i].push(matrix[j][i]);
+            }
+        }
+        return newMatrix;
+    }
+    
+    return newMatrix;
 };
 
 // TODO: answer here
-
+// var input = [[1,2,3],[4,5,6],[7,8,9]];
+// console.log(input);
+// console.log("----------");
+// console.log(rotation(input)); 
 module.exports = rotation
