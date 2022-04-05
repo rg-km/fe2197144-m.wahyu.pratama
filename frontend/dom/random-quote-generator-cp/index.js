@@ -8,6 +8,25 @@ Uncomment variable dibawah ini untuk mulai mengerjakan. dilarang mengganti nama 
 // let year = element untuk menampilkan year
 // let button = tombol untuk melakuan generate random quote
 
+function getAuthor() {
+	  let author = document.getElementById("author");
+	  let citation = document.getElementById("citation");
+	  let year = document.getElementById("year");
+	  let quote = document.getElementById("quote");
+	  let xhr = new XMLHttpRequest();
+	  xhr.open("GET", "https://talaikis.com/api/quotes/random/", true);
+	  xhr.onload = function() {
+		if (this.status == 200) {
+			let data = JSON.parse(this.responseText);
+			quote.innerHTML = data.quote;
+			author.innerHTML = data.author;
+			citation.innerHTML = data.permalink;
+			year.innerHTML = data.year;
+		}
+	};
+	xhr.send();
+}
+
 var quotes = [
 	{
 		quote: "Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.",
@@ -175,6 +194,8 @@ var quotes = [
 
 function getQuote() {
 	// TODO: answer here
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	
 }
 
 

@@ -17,23 +17,23 @@
   </head>
   <body>
     <div class="navbar">
-      <button class="btn btn-warning new-game" style="font-weight: bold;">New Game</button>
+      <button id="new-game" class="btn btn-warning new-game" style="font-weight: bold;">New Game</button>
       <p style="font-size: 1.5rem; font-weight: bold;">Guess any number between 1 and 10</p>
     </div>
     <div class="main">
       <div class="top">
         <h1>Guess My Number!</h1>
         <div id="hidden-number" style="display: none;"></div>
-        <div class="number">?</div>
+        <div id="number" class="number">?</div>
       </div>
       <div class="bottom">
         <div class="left">
-          <input type="number" class="input">
-          <button class="btn btn-primary check">Check!</button>
+          <input type="number" id="guess-input" class="input">
+          <button id="check" class="btn btn-primary check">Check!</button>
         </div>
         <div class="right">
-          <p class="message">Lets start guessing...</p>
-          <p class="score-label">Score: <span class="score">10</span></p>
+          <p id="message" class="message">Lets start guessing...</p>
+          <p class="score-label">Score: <span id="display-score" class="score">0</span></p>
         </div>
       </div>
     </div>

@@ -36,14 +36,15 @@ function getMaximumGold(grid) {
     //     return "input should be a 2d array";
     // }
     // else{
-        for (let i = 0; i < grid.length; i++) {
-            for (let j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] !== 0) {
-                    maxGold = Math.max(maxGold, getMaximumGoldRecursive(grid, i, j));
-                }
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid.length; j++) {
+            if (grid[i][j] !== 0) {
+                
             }
+            
         }
-        return maxGold;
+        
+    }
     // }
 }; 
 
