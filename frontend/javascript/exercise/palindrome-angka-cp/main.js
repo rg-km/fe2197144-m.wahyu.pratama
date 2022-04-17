@@ -8,6 +8,35 @@
 
 function angkaPalindrome(num) {
   // TODO: answer here
+  // var index = 0;
+  var temp = false;
+  do {
+    var res = num.toString();
+    if (num <= 99) {
+      if (res[0] !== res[1]) {
+        num++;
+      }
+      else{
+        num = parseInt(res);
+        temp = true;
+      }  
+    }
+    else if (num >= 100 && num <= 999){
+      if (res[0] !== res[2]) {
+        num++;
+      }
+      else{
+        num = parseInt(res);
+        temp = true;
+      }
+    }
+    else{
+
+    }
+    
+  } while (!temp);
+  return num;
+  
 }
 
 console.log(angkaPalindrome(10)); //11

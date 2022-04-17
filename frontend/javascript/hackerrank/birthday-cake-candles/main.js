@@ -14,6 +14,19 @@
 function birthdayCakeCandles(candles) {
   // Write your code here
 	// TODO: answer here
+  count = 0
+  max = 0
+  for (let index = 0; index < candles.length; index++) {
+    if (max < candles[index]) {
+      max = candles[index]
+    }    
+  }
+  for (let index = 0; index < candles.length; index++) {
+    if (candles[index] == max) {
+      count++
+    }
+  }
+  return count
 }
 
 function main() {

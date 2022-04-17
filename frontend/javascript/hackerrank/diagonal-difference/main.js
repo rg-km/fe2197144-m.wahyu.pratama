@@ -14,6 +14,18 @@
 function diagonalDifference(arr) {
   // Write your code here
   // TODO: answer here
+  ltrd = 0
+  for (let i = 0; i < arr.length; i++) {
+    ltrd += arr[i][i]
+  }
+  rtld = 0
+  j = 0
+  for (let i = arr.length-1; i >= 0; i--) {
+    rtld += arr[j][i]
+    j++
+  }
+  res = Math.abs(ltrd - rtld)
+  return res
 }
 
 function main() {

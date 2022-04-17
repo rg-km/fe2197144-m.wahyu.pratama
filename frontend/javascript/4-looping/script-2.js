@@ -11,6 +11,7 @@
 
 
 // Masukan jumlah baris
+const prompt = require('prompt-sync')();
 const n = parseInt(prompt("Masukan jumlah baris: "));
 
 let stars = "";

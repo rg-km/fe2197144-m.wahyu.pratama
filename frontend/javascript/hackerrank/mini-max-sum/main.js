@@ -12,7 +12,25 @@
 
 function miniMaxSum(arr) {
   // Write your code here
-  // TODO: answer here
+  // TODO: answer 
+  min = 999
+  max = 0
+  for (let i = 0; i < arr.length; i++) { // 0
+    total = 0
+    for (let j = 0; j < arr.length; j++) { // 0
+      if (i != j) {  //0 != 1
+        total += arr[j]
+      }
+    }
+    console.log(total);
+    if (total > max) {
+      max = total
+    }
+    else if (total < min) {
+      min = total
+    }
+  }
+  return min+' '+max
 }
 
 function main() {

@@ -15,6 +15,31 @@
 function breakingRecords(scores) {
   // Write your code here
   // TODO: answer here
+  result = [0, 0]
+  min = scores[0]
+  max = 0
+  for (let index = 0; index < scores.length-1; index++) {
+    // const element = array[index];
+    if (scores[index] > scores[index+1]) { // 20 & 4
+      if (max < scores[index]) { // 20 < 20
+        max = scores[index] //10
+      }
+      if (min > scores[index+1]) { //5 > 4
+        min = scores[index+1] //4
+        result[1] += 1 // 2
+      }
+    }
+    else if (scores[index] < scores[index+1]) { // 5 & 20
+      if (max < scores[index+1]){ // 10 < 20
+        max = scores[index+1] // 20
+        result[0] += 1 // 1
+      }
+      if (min > scores[index]) { // 5 > 5
+        min = scores[index+1]
+      }
+    }
+  }
+  return result
 }
 
 function main() {
