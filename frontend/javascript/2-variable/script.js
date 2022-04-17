@@ -1,5 +1,5 @@
 // Menukar variabel a dan b
-
+const prompt = require('prompt-sync')();
 let a = prompt('Masukan variabel pertama: ');
 let b = prompt('Masukan variabel kedua: ');
 
