@@ -21,6 +21,58 @@ Lengkapilah function dengan input kata sandi dan output terjemahannya
 
 function terjemahKataSandi(kataSandi) {
   // TODO: answer here
+  var terjemahKata = ''
+  for (let i = 0; i < kataSandi.length; i++) {
+    switch (kataSandi[i]) {
+      case '&':
+        terjemahKata += ''
+        break;
+      case '%':
+        terjemahKata += ''
+        break;
+      case '^':
+        terjemahKata += ''
+        break;
+      case '#':
+        terjemahKata += ' '
+        break;
+      case ']':
+        terjemahKata += ','
+        break;
+      case '+':
+        terjemahKata += 'A'
+        break;
+      case ' ':
+        terjemahKata += 'E'
+        break
+      default:
+        terjemahKata += kataSandi[i]
+        break;
+    }
+    // const element = array[index];
+    // console.log(kataSandi[i]);
+    // if (kataSandi[i] == '#') {
+    //   terjemahKata += ' '
+    // }
+    // else if (kataSandi[i] == ']') {
+    //   terjemahKata += ','
+    // }
+    // else if (kataSandi[i] == '+') {
+    //   terjemahKata += 'A'
+    // }
+    // else if (kataSandi[i] == ' ') {
+    //   terjemahKata += 'E' 
+    // }
+    // else if (kataSandi[i] == '&') {
+    //   terjemahKata += '' 
+    //   console.log('masuk1');
+    // }
+    // else{
+    //   terjemahKata += kataSandi[i]
+    // }
+    
+  }
+  return terjemahKata
 }
 
 

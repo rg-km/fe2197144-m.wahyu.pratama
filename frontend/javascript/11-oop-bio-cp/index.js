@@ -13,6 +13,36 @@ class Person {
   }
   
   // TODO: answer here
+  getName () {
+    return this.name;
+  }
+  getAge () {
+    return this.age;
+  }
+  getJob () {
+    return this.job;
+  }
+  setName (name) {  // setter
+    this.name = name;
+  }
+  setAge (age) {  // setter 
+    this.age = age;
+  }
+  setJob (job) {  // setter
+    this.job = job;
+  }
 }
+const person = new Person('Wahyu', 20, 'Frontend Developer');
+console.log(person.getName()); // Wahyu
+console.log(person.getAge()); // 20
+console.log(person.getJob()); // Frontend Developer
+
+p.setName('Wahyu Pratama');
+p.setAge(21);
+p.setJob('Frontend Developer');
+console.log(p.getName()); // Wahyu Pratama
+console.log(p.getAge()); // 21
+console.log(p.getJob()); // Frontend Developer
+
 
 module.exports = Person

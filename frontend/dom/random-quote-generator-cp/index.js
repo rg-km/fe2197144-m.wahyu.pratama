@@ -8,24 +8,11 @@ Uncomment variable dibawah ini untuk mulai mengerjakan. dilarang mengganti nama 
 // let year = element untuk menampilkan year
 // let button = tombol untuk melakuan generate random quote
 
-function getAuthor() {
-	  let author = document.getElementById("author");
-	  let citation = document.getElementById("citation");
-	  let year = document.getElementById("year");
-	  let quote = document.getElementById("quote");
-	  let xhr = new XMLHttpRequest();
-	  xhr.open("GET", "https://talaikis.com/api/quotes/random/", true);
-	  xhr.onload = function() {
-		if (this.status == 200) {
-			let data = JSON.parse(this.responseText);
-			quote.innerHTML = data.quote;
-			author.innerHTML = data.author;
-			citation.innerHTML = data.permalink;
-			year.innerHTML = data.year;
-		}
-	};
-	xhr.send();
-}
+let quote = document.getElementById("random-quote");
+let author = document.getElementById("author");
+let citation = document.getElementById("citation");
+let year = document.getElementById("year");
+let button = document.getElementById("button");
 
 var quotes = [
 	{
@@ -191,14 +178,32 @@ var quotes = [
 ];
 
 // TODO: answer here
+button.addEventListener("click", getQuote)
+
+
 
 function getQuote() {
 	// TODO: answer here
 	var randomNumber = Math.floor(Math.random() * (quotes.length));
+
+	var currQuete = quotes[randomNumber];
+	quote.innerText = currQuete.quote;
+	author.innerText = currQuete.author;
+	if(currQuete.hasOwnProperty("citation") ){
+		citation.innerText = currQuete.citation;
+	}else{
+		citation.innerText = " ";
+	}
+	if( currQuete.hasOwnProperty("year")){
+		year.innerText = currQuete.year;
+	}else{
+		year.innerText= "";
+	}
+	console.log(currQuete);
+}
+
+
+// function displayQuote(n) {
+// 	// TODO: answer here
 	
-}
-
-
-function displayQuote() {
-	// TODO: answer here
-}
+// }

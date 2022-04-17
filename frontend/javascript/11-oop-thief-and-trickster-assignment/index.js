@@ -8,10 +8,28 @@ class Thief extends Player {
   
   robbedBlind() {
     // TODO: answer here
+    this.setStealChance(0.75);
+    if (this.getGold() < 10) {
+      return "Aku terlalu miskin";
+    }
   }
 
   steal(player) {
     // TODO: answer here
+    var value = Math.random()
+    if (value < player.getDistractionPurseChance()) {
+      player.setGold(player.gold + 5)
+      this.setGold(this.getGold() - 5);
+      if (this.getGold() < 1) {
+        return "Berhasil mencuri balik semua uang lawan"
+      }
+      else{
+        return "Berhasil mencuri balik 10 gold"
+      }
+    }
+    else{
+      return "Gagal mencuri balik"
+    }
   }
 }
 
@@ -24,10 +42,12 @@ class Trickster extends Player {
 
   setDistractionPurseChance(chance) {
     // TODO: answer here
+    this.distractionPurseChance = chance
   }
 
   getDistractionPurseChance() {
     // TODO: answer here
+    return this.distractionPurseChance
   }
 
   distractionPurse(player) {
