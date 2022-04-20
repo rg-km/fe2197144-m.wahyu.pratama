@@ -10,6 +10,12 @@
 
 const convertElementToType = (array) => {
   // TODO: answer here
-};
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    result.push(typeof array[i]);
+  }
+  return result;
 
+};
+console.log(convertElementToType(["A", 3, [2]]));
 module.exports = convertElementToType
