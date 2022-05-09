@@ -8,6 +8,14 @@
 
 const countRepetition = (numbers) => {
   // TODO: answer here
+  const repetition = numbers.reduce((acc, curr) => {
+    if(acc[curr]) {
+      acc[curr] += 1;
+    } else {
+      acc[curr] = 1;
+    }
+    return acc;
+  }, {});
   return repetition;
 };
 

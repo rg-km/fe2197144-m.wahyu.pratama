@@ -7,6 +7,8 @@
 
 const sumTotalArray = (numbers) => {
   // TODO: answer here
+  const sum = numbers.reduce((acc, curr) => acc + curr);
+  return sum;
 };
 
 module.exports = sumTotalArray

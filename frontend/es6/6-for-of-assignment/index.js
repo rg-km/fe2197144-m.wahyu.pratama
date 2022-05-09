@@ -17,22 +17,14 @@ const checkOmnipresent = (array, valueToFind) => {
   for ( i  of array )  {
     for (j  of i) {
       if (j === valueToFind) {
-        result = true;
+        return true;
         
+      }else{
+        return false;
       }
-      toEquals(array, valueToFind) ;
-
-    }
-    return result;
   }
-  // for (let i = 0; i < array.length; i++) {
-  //   for (let j = 0; j < array[i].length; j++) {
-  //     if (array[i][j] === valueToFind) {
-  //       result = true;
-  //     }
-  //   }
-  // }
-  // return result;
+}
+
 };
 console.log(checkOmnipresent([[1, 2, 3], [5, 4, 1], [4, 14, 1]], 1));
 console.log(checkOmnipresent([[1, 2, 3], [5, 4, 1], [4, 14, 1]], 2));

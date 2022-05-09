@@ -37,7 +37,41 @@
 
 function countStudentsCantEat(students, sandwiches) {
 	return 0 // TODO: replace this
+ const eat = [];
+ const cantEat = [];
+ 
+ const studentsLength = students.length;
+    const sandwichesLength = sandwiches.length;
+    for (let i = 0; i < sandwichesLength; i++) {
+        if (sandwiches[i] === 0) {
+            eat.push(0);
+        } else {
+            eat.push(1);
+        }
+    }
+    for (let i = 0; i < studentsLength; i++) {
+        if (students[i] === 0) {
+            cantEat.push(0);
+        } else {
+            cantEat.push(1);
+        }
+    }
+    for (let i = 0; i < studentsLength; i++) {
+        if (cantEat[i] === eat[i]) {
+            cantEatCount++;
+        }if (cantEat[i] !== eat[i]) {
+            cantEatCount = cantEatCount;
+        }
+        if (cantEat[i] !== eat[i]) {
+            cantEatCount++;
+        }if (cantEat[i] === eat[i]) {
+            cantEatCount = cantEatCount;
+        }
+
+    }
+    return cantEatCount;
 }
+
 
 console.log(countStudentsCantEat([1,1,1,0,0,1], [1,0,0,0,1,1])); // 3
 console.log(countStudentsCantEat([1,1,0,0], [0,1,0,1])); // 0
